@@ -2,7 +2,7 @@ import streamlit as st
 from sklearn.preprocessing import LabelEncoder
 import numpy as np
 import joblib
-model = joblib.load('model_filename.pkl')
+model = joblib.load('Ferment_linear_model.pkl')
 # Assuming the model is already loaded
 # Replace this with your model loading code
 # model = ...
