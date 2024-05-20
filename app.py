@@ -24,7 +24,7 @@ def main():
 
     
     labelencode=LabelEncoder()
-df['feature3']=labelencode.fit_transform(df['feature3'])
+df['feature3']=labelencode.fit_transform('feature3')
     # Button to trigger prediction
 if st.button('Predict'):
     # Make prediction
