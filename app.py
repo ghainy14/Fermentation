@@ -40,7 +40,7 @@ def main():
         prediction = predict(input_data)
 
         # Display prediction result
-        st.write('Prediction:', prediction)
+        st.write('Prediction Day:', prediction)
 
 if __name__ == "__main__":
     main()
