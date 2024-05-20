@@ -10,7 +10,7 @@ import numpy as np
 def predict(input_data):
     # Preprocess input_data if necessary
     # Make predictions using the loaded model
-    prediction = model.predict(input_data)
+    prediction = linear.predict(input_data)
     return prediction
 
 # Streamlit UI
