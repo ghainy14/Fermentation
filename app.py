@@ -39,8 +39,11 @@ def main():
         input_data = np.array([[feature1, feature2, encoded_feature3]])  # Adjust according to your model's input format
         prediction = predict(input_data)
 
+        # Round prediction to the nearest whole number
+        rounded_prediction = round(prediction[0])
+
         # Display prediction result
-        st.write('Prediction Day:', prediction)
+        st.write('Prediction:', rounded_prediction)
 
 if __name__ == "__main__":
     main()
