@@ -24,7 +24,8 @@ def main():
 
     
     labelencode=LabelEncoder()
-features3=labelencode.fit_transform('feature3')
+features3=labelencode.transform('feature3')
+
     # Button to trigger prediction
 if st.button('Predict'):
     # Make prediction
