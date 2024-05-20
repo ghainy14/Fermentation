@@ -26,13 +26,12 @@ def main():
     labelencode=LabelEncoder()
 df['feature3']=labelencode.fit_transform(df['feature3'])
     # Button to trigger prediction
- if st.button('Predict'):
-        # Make prediction
-        input_data = [[feature1, feature2, feature3]]  # Adjust according to your model's input format
-        prediction = predict(input_data)
-
-        # Display prediction result
-        st.write('Prediction:', prediction)
+if st.button('Predict'):
+    # Make prediction
+    input_data = [[feature1, feature2, feature3]]  # Adjust according to your model's input format
+    prediction = predict(input_data)
+    # Display prediction result
+    st.write('Prediction:', prediction)
 
 if __name__ == "__main__":
     main()
