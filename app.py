@@ -1,7 +1,8 @@
 import streamlit as st
 from sklearn.preprocessing import LabelEncoder
 import numpy as np
-
+import joblib
+model = joblib.load('model_filename.pkl')
 # Assuming the model is already loaded
 # Replace this with your model loading code
 # model = ...
@@ -10,7 +11,7 @@ import numpy as np
 def predict(input_data):
     # Preprocess input_data if necessary
     # Make predictions using the loaded model
-    prediction = linear.predict(input_data)
+    prediction = model.predict(input_data)
     return prediction
 
 # Streamlit UI
