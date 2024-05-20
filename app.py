@@ -22,7 +22,7 @@ def main():
     feature2 = st.number_input('DRY BIOMASS(g)', min_value=0, max_value=100, step=1)
 
     # Dropdown for CARBON SOURCE
-    carbon_sources = ['Glu', 'Fructose', 'Sucrose', 'Maltose']  # Example options
+    carbon_sources = ['Shea butter kernel extract', 'Ipomoea Batatas Peel ectract', 'Palm Fruit empty fibre']  # Example options
     feature3 = st.selectbox('CARBON SOURCE', options=carbon_sources)
 
     # Initialize LabelEncoder
