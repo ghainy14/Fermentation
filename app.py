@@ -43,7 +43,7 @@ def main():
         rounded_prediction = round(prediction[0])
 
         # Display prediction result
-        st.write('Prediction:', rounded_prediction)
+        st.write('Predicted day:', rounded_prediction)
 
 if __name__ == "__main__":
     main()
