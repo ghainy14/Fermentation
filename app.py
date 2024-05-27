@@ -27,6 +27,9 @@ def main():
     # Initialize LabelEncoder
     label_encoder = LabelEncoder()
     label_encoder.fit(carbon_sources)
+    label_encoder.fit(feature1)
+    label_encoder.fit(feature2)
+    
 
     # Button to trigger prediction
     if st.button('Predict'):
