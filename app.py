@@ -25,8 +25,16 @@ def main():
 
     # Button to trigger prediction
     if st.button('Predict'):
+        # Encode the carbon source
+        encoded_feature3 = carbon_sources.index(feature3)
+
         # Make prediction
-        input_data = np.array([[feature1, feature2, feature3]])  # Adjust according to your model's input format
+        input_data = np.array([[feature1, feature2, encoded_feature3]])  # Adjust according to your model's input format
+
+        # Ensure the input data shape is (n_samples, n_features)
+        input_data = input_data.reshape(1, -1)  # Reshape to (1, 3) assuming 3 features
+
+        # Make prediction
         prediction = predict(input_data)
 
         # Display prediction result
