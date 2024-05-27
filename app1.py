@@ -1,8 +1,12 @@
 import streamlit as st
 import numpy as np
 import joblib
+import joblib
 
-# Load your trained model
+# Save the model
+joblib.dump(model, 'model.pkl')
+
+# Load the model
 model = joblib.load('Ferment_DecisionTree_model.pkl')
 
 # Define function to make predictions
