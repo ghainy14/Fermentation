@@ -35,9 +35,11 @@ def main():
     if st.button('Predict'):
         # Encode the carbon source
         encoded_feature3 = label_encoder.transform([feature3])[0]
+         encoded_feature1 = label_encoder.transform([feature1])[0]
+         encoded_feature2 = label_encoder.transform([feature2])[0]
 
         # Make prediction
-        input_data = np.array([[feature1, feature2, encoded_feature3]])  # Adjust according to your model's input format
+        input_data = np.array([[encoded_feature1, encoded_feature2, encoded_feature3]])  # Adjust according to your model's input format
         prediction = predict(input_data)
 
         # Round prediction to the nearest whole number
