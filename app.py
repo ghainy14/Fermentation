@@ -37,8 +37,11 @@ def main():
         # Make prediction
         prediction = predict(input_data)
 
+         Round prediction to the nearest whole number
+        rounded_prediction = round(prediction[0])
+
         # Display prediction result
-        st.write('Predicted day:', prediction[0])
+        st.write('Predicted day:', rounded_prediction)
 
 if __name__ == "__main__":
     main()
