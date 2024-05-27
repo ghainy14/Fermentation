@@ -37,7 +37,7 @@ def main():
         # Make prediction
         prediction = predict(input_data)
 
-         Round prediction to the nearest whole number
+        #Round prediction to the nearest whole number
         rounded_prediction = round(prediction[0])
 
         # Display prediction result
