@@ -16,8 +16,8 @@ def main():
     st.title('Machine Learning Model Predictor')
 
     # Input features
-    feature1 = st.number_input('WET BIOMASS(g)', min_value=0.0, max_value=100.0, step=0.1)
-    feature2 = st.number_input('DRY BIOMASS(g)', min_value=0.0, max_value=100.0, step=0.1)
+    feature1 = st.number_input('WET BIOMASS(g)', min_value=0.0, max_value=100.0, step=0.01)
+    feature2 = st.number_input('DRY BIOMASS(g)', min_value=0.0, max_value=100.0, step=0.01)
 
     # Dropdown for CARBON SOURCE
     carbon_sources = ['Shea butter kernel extract', 'Ipomoea Batatas Peel extract', 'Palm Fruit empty fibre']  # Example options
