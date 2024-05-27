@@ -1,10 +1,6 @@
 import streamlit as st
 import numpy as np
 import joblib
-import joblib
-
-# Save the model
-joblib.dump(model, 'Ferment_DecisionTree_model.pkl')
 
 # Load the model
 model = joblib.load('Ferment_DecisionTree_model.pkl')
