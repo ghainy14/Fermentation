@@ -13,7 +13,7 @@ def predict(input_data):
 
 # Streamlit UI
 def main():
-    st.title('Machine Learning Model Predictor')
+    st.title('Fermentation Day Predictor Using Decision Tree')
 
     # Input features
     feature1 = st.number_input('WET BIOMASS(g)', min_value=0.0, max_value=100.0, step=0.1)
