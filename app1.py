@@ -4,7 +4,7 @@ import joblib
 import joblib
 
 # Save the model
-joblib.dump(model, 'model.pkl')
+joblib.dump(model, 'Ferment_DecisionTree_model.pkl')
 
 # Load the model
 model = joblib.load('Ferment_DecisionTree_model.pkl')
