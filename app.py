@@ -1,5 +1,4 @@
 import streamlit as st
-from sklearn.preprocessing import LabelEncoder
 import numpy as np
 import joblib
 
@@ -24,29 +23,14 @@ def main():
     carbon_sources = ['Shea butter kernel extract', 'Ipomoea Batatas Peel extract', 'Palm Fruit empty fibre']  # Example options
     feature3 = st.selectbox('CARBON SOURCE', options=carbon_sources)
 
-    # Initialize LabelEncoder
-    label_encoder = LabelEncoder()
-    label_encoder.fit(carbon_sources)
-    label_encoder.fit(feature1)
-    label_encoder.fit(feature2)
-    
-
     # Button to trigger prediction
     if st.button('Predict'):
-        # Encode the carbon source
-        encoded_feature3 = label_encoder.transform([feature3])[0]
-        encoded_feature1 = label_encoder.transform([feature1])[0]
-        encoded_feature2 = label_encoder.transform([feature2])[0]
-
         # Make prediction
-        input_data = np.array([[encoded_feature1, encoded_feature2, encoded_feature3]])  # Adjust according to your model's input format
+        input_data = np.array([[feature1, feature2, feature3]])  # Adjust according to your model's input format
         prediction = predict(input_data)
 
-        # Round prediction to the nearest whole number
-        rounded_prediction = round(prediction[0])
-
         # Display prediction result
-        st.write('Predicted day:', rounded_prediction)
+        st.write('Predicted day:', prediction[0])
 
 if __name__ == "__main__":
     main()
