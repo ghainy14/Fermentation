@@ -2,14 +2,12 @@ import streamlit as st
 from sklearn.preprocessing import LabelEncoder
 import numpy as np
 import joblib
+
+# Load your trained model
 model = joblib.load('Ferment_linear_model.pkl')
-# Assuming the model is already loaded
-# Replace this with your model loading code
-# model = ...
 
 # Define function to make predictions
 def predict(input_data):
-    # Preprocess input_data if necessary
     # Make predictions using the loaded model
     prediction = model.predict(input_data)
     return prediction
@@ -19,11 +17,11 @@ def main():
     st.title('Machine Learning Model Predictor')
 
     # Input features
-    feature1 = st.number_input('WET BIOMASS(g)', min_value=0, max_value=100, step=0.1)
-    feature2 = st.number_input('DRY BIOMASS(g)', min_value=0, max_value=100, step=0.1)
+    feature1 = st.number_input('WET BIOMASS(g)', min_value=0.0, max_value=100.0, step=0.1)
+    feature2 = st.number_input('DRY BIOMASS(g)', min_value=0.0, max_value=100.0, step=0.1)
 
     # Dropdown for CARBON SOURCE
-    carbon_sources = ['Shea butter kernel extract', 'Ipomoea Batatas Peel ectract', 'Palm Fruit empty fibre']  # Example options
+    carbon_sources = ['Shea butter kernel extract', 'Ipomoea Batatas Peel extract', 'Palm Fruit empty fibre']  # Example options
     feature3 = st.selectbox('CARBON SOURCE', options=carbon_sources)
 
     # Initialize LabelEncoder
@@ -47,4 +45,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
